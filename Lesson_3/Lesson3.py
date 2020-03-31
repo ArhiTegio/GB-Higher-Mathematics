@@ -125,14 +125,84 @@ import math
 # Задание 5.2
 # Нарисуйте трехмерный график двух любых поверхностей второго порядка.
 
-fig = figure()
-ax = Axes3D(fig)
-X = np.arange(-3, 3, 0.5)
-Y = np.arange(-7, 7, 0.5)
-a = 2
-b = 4
-X, Y = np.meshgrid(X, Y)
-Z = (X ** 2/a ** 2) - (Y ** 2/b ** 2)
-ax.plot_wireframe(X, Y, Z)
-ax.scatter(0, 0, 0, 'z', 50, 'red')
-show()
+# fig = figure()
+# ax = Axes3D(fig)
+# X = np.arange(-3, 3, 0.5)
+# Y = np.arange(-7, 7, 0.5)
+# a = 2
+# b = 4
+# X, Y = np.meshgrid(X, Y)
+# Z = (X ** 2/a ** 2) - (Y ** 2/b ** 2)
+# ax.plot_wireframe(X, Y, Z)
+# ax.scatter(0, 0, 0, 'z', 50, 'red')
+# show()
+
+
+# Задание 1
+# Нарисуйте график функции: y(x) = k∙cos(x – a) + b
+# fig, ax_f = plt.subplots()
+#
+# x = np.linspace(-5, 5, 100)
+# y1 = 1 * np.cos(x - 2) + 3
+# y2 = 3 * np.cos(x - 2) + 1
+# y3 = 2 * np.cos(x - 4) + 2
+#
+# ax_f.plot(x, y1)
+# ax_f.plot(x, y2)
+# ax_f.plot(x, y3)
+# ax_f.set_xlim(-15, 15)
+# ax_f.set_ylim(-15, 15)
+# ax_f.set_title('Задание 1.')
+#
+# plt.show()
+
+
+# Задание 3
+# Напишите код, который будет переводить полярные координаты в декартовы.
+# r = 5
+# a = 1 #угол в радианах
+# x = r * math.cos(a)
+# y = r * math.sin(a)
+# print("x = " + str(x))
+# print("y = " + str(y))
+
+# Напишите код, который будет рисовать график окружности в полярных координатах.
+# a = np.linspace(0, 2*math.pi, 50)
+# r = 10
+# x = r * np.cos(a)
+# y = r * np.sin(a)
+#
+# plt.plot(x, y)
+# plt.show()
+#
+# #Напишите код, который будет рисовать график отрезка прямой линии в полярных координатах.#
+# x = np.linspace(0, 10, 50)
+# a = math.pi / 4
+# y = x * np.sin(a)
+#
+# plt.plot(x, y)
+# plt.show()
+
+# Задание 4
+# 4.1 Решите систему уравнений:
+# x = np.linspace(-10, 10, 50)
+#
+# y1 = x ** 2 - 1
+# y2 = (np.exp(x) + x)/-x
+#
+#
+# plt.plot(x, y1)
+# plt.plot(x, y2)
+# plt.show()
+
+# 4.2 Решите систему уравнений:
+# x1 = np.linspace(-500, 500, 300)
+# y1 = x1 ** 2 - 1
+# xy = [[_x, (np.exp(_x) + _x) / - _x] for _x, _y in zip(x1, x1) if math.exp(_x) + _x * (_x - (math.exp(_x) + _x)/-_x) > 1]
+# x2 = [x for x, y in xy]
+# y2 = [y for x, y in xy]
+#
+# plt.plot(x1, y1)
+# plt.plot(x2, y2)
+#
+# plt.show()
